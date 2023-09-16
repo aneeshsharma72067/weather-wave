@@ -131,15 +131,15 @@ const removeCamelCase = (str) => {
 const getWeatherData = async () => {
   try {
     const currentWeather = await axios.get(
-      `https://api.openweathermap.org/data/2.5/weather?lat=${route.query.lat}&lon=${route.query.lon}&units=metric&appid=${apiKey}`
+      `https://api.openweathermap.org/data/2.5/weather?lat=${route.query.lat}&lon=${route.query.lon}&units=metric&appid=4b36b26b97e7e7ad2457d89ac97e408c`
     );
 
     const hourlyWeather = await axios.get(
-      `https://pro.openweathermap.org/data/2.5/forecast/hourly?lat=${route.query.lat}&lon=${route.query.lon}&units=metric&appid=${apiKey}`
+      `https://pro.openweathermap.org/data/2.5/forecast/hourly?lat=${route.query.lat}&lon=${route.query.lon}&units=metric&appid=4b36b26b97e7e7ad2457d89ac97e408c`
     );
 
     const dailyWeather = await axios.get(
-      `https://api.openweathermap.org/data/2.5/forecast/daily?lat=${route.query.lat}&lon=${route.query.lon}&cnt=7&units=metric&appid=${apiKey}`
+      `https://api.openweathermap.org/data/2.5/forecast/daily?lat=${route.query.lat}&lon=${route.query.lon}&cnt=7&units=metric&appid=4b36b26b97e7e7ad2457d89ac97e408c`
     );
 
     const weatherData = {
